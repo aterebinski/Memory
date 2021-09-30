@@ -14,6 +14,7 @@ namespace Memory
         Random random = new Random();
         Label first;
         Label second;
+        int myTime = 60;
         public MemoForm()
         {
             InitializeComponent();
@@ -32,16 +33,56 @@ namespace Memory
             
         }
 
-        private void iconClick(object sender, EventArgs e)
+        private void icon_click(object sender, EventArgs e)
         {
+            Label label = sender as Label;
+
+            if (timer1.Enabled)
+            {
+                return;
+            }
+
+            if (label.ForeColor == Color.Black)
+                return; //kliknięto już odkryty kafelek
+
+            label.ForeColor = Color.Black;
 
             if (first == null)
-            {
-                first = sender as Label;
+            {    
+                first = label;
             }
             else
             {
+                second = label;
 
+                if (first.Text == second.Text)
+                {
+                    
+                    bool allFound = true;
+                    foreach (var item in polePanel.Controls)
+                    {
+                        Label l = item as Label;
+                        if (l.ForeColor == l.BackColor)
+                        {
+                            allFound = false;
+                        }
+                    }
+
+                    first = null;
+                    second = null;
+
+                    if (allFound)
+                    {
+                        MessageBox.Show("All icons have been found!");
+                    }
+                }
+                else
+                {
+                    timer1.Start();
+                    
+                }
+
+                
             }
         }
 
@@ -50,9 +91,18 @@ namespace Memory
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            iconClick(sender, e);
+            first.ForeColor = first.BackColor;
+            second.ForeColor = second.BackColor;
+            first = null;
+            second = null;
+            timer1.Stop();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            myTime--;
         }
     }
 }

@@ -29,6 +29,7 @@ namespace Memory
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.polePanel = new System.Windows.Forms.TableLayoutPanel();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -46,11 +47,16 @@ namespace Memory
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timeLabel = new System.Windows.Forms.Label();
             this.polePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // polePanel
             // 
+            this.polePanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.polePanel.ColumnCount = 4;
             this.polePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.polePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -89,13 +95,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(378, 336);
+            this.label16.Location = new System.Drawing.Point(376, 337);
             this.label16.Margin = new System.Windows.Forms.Padding(3);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(119, 106);
+            this.label16.Size = new System.Drawing.Size(120, 104);
             this.label16.TabIndex = 15;
             this.label16.Text = "label16";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label16.Click += new System.EventHandler(this.icon_click);
             // 
             // label15
             // 
@@ -104,13 +111,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(253, 336);
+            this.label15.Location = new System.Drawing.Point(252, 337);
             this.label15.Margin = new System.Windows.Forms.Padding(3);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(119, 106);
+            this.label15.Size = new System.Drawing.Size(117, 104);
             this.label15.TabIndex = 14;
             this.label15.Text = "label15";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label15.Click += new System.EventHandler(this.icon_click);
             // 
             // label14
             // 
@@ -119,13 +127,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(128, 336);
+            this.label14.Location = new System.Drawing.Point(128, 337);
             this.label14.Margin = new System.Windows.Forms.Padding(3);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(119, 106);
+            this.label14.Size = new System.Drawing.Size(117, 104);
             this.label14.TabIndex = 13;
             this.label14.Text = "label14";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label14.Click += new System.EventHandler(this.icon_click);
             // 
             // label13
             // 
@@ -134,13 +143,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(3, 336);
+            this.label13.Location = new System.Drawing.Point(4, 337);
             this.label13.Margin = new System.Windows.Forms.Padding(3);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(119, 106);
+            this.label13.Size = new System.Drawing.Size(117, 104);
             this.label13.TabIndex = 12;
             this.label13.Text = "label13";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.Click += new System.EventHandler(this.icon_click);
             // 
             // label12
             // 
@@ -149,13 +159,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(378, 225);
+            this.label12.Location = new System.Drawing.Point(376, 226);
             this.label12.Margin = new System.Windows.Forms.Padding(3);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 105);
+            this.label12.Size = new System.Drawing.Size(120, 104);
             this.label12.TabIndex = 11;
             this.label12.Text = "label12";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label12.Click += new System.EventHandler(this.icon_click);
             // 
             // label11
             // 
@@ -164,13 +175,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(253, 225);
+            this.label11.Location = new System.Drawing.Point(252, 226);
             this.label11.Margin = new System.Windows.Forms.Padding(3);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(119, 105);
+            this.label11.Size = new System.Drawing.Size(117, 104);
             this.label11.TabIndex = 10;
             this.label11.Text = "label11";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.Click += new System.EventHandler(this.icon_click);
             // 
             // label10
             // 
@@ -179,13 +191,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(128, 225);
+            this.label10.Location = new System.Drawing.Point(128, 226);
             this.label10.Margin = new System.Windows.Forms.Padding(3);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(119, 105);
+            this.label10.Size = new System.Drawing.Size(117, 104);
             this.label10.TabIndex = 9;
             this.label10.Text = "label10";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.Click += new System.EventHandler(this.icon_click);
             // 
             // label9
             // 
@@ -194,13 +207,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(3, 225);
+            this.label9.Location = new System.Drawing.Point(4, 226);
             this.label9.Margin = new System.Windows.Forms.Padding(3);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(119, 105);
+            this.label9.Size = new System.Drawing.Size(117, 104);
             this.label9.TabIndex = 8;
             this.label9.Text = "label9";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.Click += new System.EventHandler(this.icon_click);
             // 
             // label8
             // 
@@ -209,13 +223,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(378, 114);
+            this.label8.Location = new System.Drawing.Point(376, 115);
             this.label8.Margin = new System.Windows.Forms.Padding(3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 105);
+            this.label8.Size = new System.Drawing.Size(120, 104);
             this.label8.TabIndex = 7;
             this.label8.Text = "label8";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Click += new System.EventHandler(this.icon_click);
             // 
             // label7
             // 
@@ -224,13 +239,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(253, 114);
+            this.label7.Location = new System.Drawing.Point(252, 115);
             this.label7.Margin = new System.Windows.Forms.Padding(3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 105);
+            this.label7.Size = new System.Drawing.Size(117, 104);
             this.label7.TabIndex = 6;
             this.label7.Text = "label7";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Click += new System.EventHandler(this.icon_click);
             // 
             // label6
             // 
@@ -239,13 +255,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(128, 114);
+            this.label6.Location = new System.Drawing.Point(128, 115);
             this.label6.Margin = new System.Windows.Forms.Padding(3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 105);
+            this.label6.Size = new System.Drawing.Size(117, 104);
             this.label6.TabIndex = 5;
             this.label6.Text = "label6";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Click += new System.EventHandler(this.icon_click);
             // 
             // label5
             // 
@@ -254,13 +271,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(3, 114);
+            this.label5.Location = new System.Drawing.Point(4, 115);
             this.label5.Margin = new System.Windows.Forms.Padding(3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 105);
+            this.label5.Size = new System.Drawing.Size(117, 104);
             this.label5.TabIndex = 4;
             this.label5.Text = "label5";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.icon_click);
             // 
             // label4
             // 
@@ -269,13 +287,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(378, 3);
+            this.label4.Location = new System.Drawing.Point(376, 4);
             this.label4.Margin = new System.Windows.Forms.Padding(3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 105);
+            this.label4.Size = new System.Drawing.Size(120, 104);
             this.label4.TabIndex = 3;
             this.label4.Text = "label4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.icon_click);
             // 
             // label3
             // 
@@ -284,13 +303,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(253, 3);
+            this.label3.Location = new System.Drawing.Point(252, 4);
             this.label3.Margin = new System.Windows.Forms.Padding(3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 105);
+            this.label3.Size = new System.Drawing.Size(117, 104);
             this.label3.TabIndex = 2;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.icon_click);
             // 
             // label2
             // 
@@ -299,13 +319,14 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(128, 3);
+            this.label2.Location = new System.Drawing.Point(128, 4);
             this.label2.Margin = new System.Windows.Forms.Padding(3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 105);
+            this.label2.Size = new System.Drawing.Size(117, 104);
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.icon_click);
             // 
             // label1
             // 
@@ -314,20 +335,49 @@ namespace Memory
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 105);
+            this.label1.Size = new System.Drawing.Size(117, 104);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.icon_click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(426, 28);
+            this.progressBar1.Maximum = 120;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(125, 29);
+            this.progressBar1.TabIndex = 1;
+            this.progressBar1.Value = 50;
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Location = new System.Drawing.Point(597, 28);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(33, 20);
+            this.timeLabel.TabIndex = 2;
+            this.timeLabel.Text = "120";
             // 
             // MemoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 564);
+            this.Controls.Add(this.timeLabel);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.polePanel);
             this.Name = "MemoForm";
             this.Text = "MemoForm";
@@ -335,6 +385,7 @@ namespace Memory
             this.polePanel.ResumeLayout(false);
             this.polePanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -357,5 +408,9 @@ namespace Memory
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label timeLabel;
     }
 }
