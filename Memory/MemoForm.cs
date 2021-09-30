@@ -14,7 +14,7 @@ namespace Memory
         Random random = new Random();
         Label first;
         Label second;
-        int myTime = 60;
+        int myTime = 120;
         public MemoForm()
         {
             InitializeComponent();
@@ -74,6 +74,7 @@ namespace Memory
                     if (allFound)
                     {
                         MessageBox.Show("All icons have been found!");
+                        timer2.Stop();
                     }
                 }
                 else
@@ -102,7 +103,22 @@ namespace Memory
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            myTime--;
+            if (progressBar1.Value>0)
+            {
+                myTime--;
+                progressBar1.Value = myTime;
+                timeLabel.Text = myTime.ToString();
+            }
+            else
+            {
+                timer2.Stop();
+                MessageBox.Show("Game Over!");
+            }
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

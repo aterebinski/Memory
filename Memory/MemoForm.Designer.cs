@@ -355,11 +355,15 @@ namespace Memory
             this.progressBar1.Maximum = 120;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(125, 29);
+            this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 1;
-            this.progressBar1.Value = 50;
+            this.progressBar1.Value = 120;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // timer2
             // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timeLabel
